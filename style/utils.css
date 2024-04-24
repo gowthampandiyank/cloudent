@@ -1,0 +1,48 @@
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-color: var(--clr-orenge);
+  color: var(--clr-mager2);
+  background-color: var(--clr-orenge);
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  box-shadow: 7px 5px 6px -14px, 0 6px 6px, 0 0 100px -10px var(--clr-mager2);
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 3.5px -5px, 0 3px 3px, 0 0 100px -10px var(--clr-mager2);
+}
+.btn:active {
+  transform: scale(0.97);
+  box-shadow: 7px 5px 56px -14px, 0 6px 6px, 0 0 100px -10px var(--clr-mager2);
+}
+
+.contaier {
+  max-width: 1070px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.section {
+  margin: 2rem;
+}
+
+/* xs  */
+/* @media (min-width: 320px) {} */
+/* sm  */
+/* @media (min-width: 649px) {} */
+/* mediam  */
+/* @media (min-width: 728px) {} */
+/* large  */
+/* @media (min-width: 1020px) {} */
+/* xlg  */
+/* @media (min-width: 1280px) {} */
+/* 2xlg  */
+/* @media (min-width: 1536px) {} */
