@@ -1,4 +1,4 @@
-.btn {
+/* .btn {
   display: inline-block;
   padding: 0.5em 1em;
   border-color: var(--clr-orenge);
@@ -20,29 +20,71 @@
 .btn:active {
   transform: scale(0.97);
   box-shadow: 7px 5px 56px -14px, 0 6px 6px, 0 0 100px -10px var(--clr-mager2);
-}
+}*/
 
 .contaier {
-  max-width: 1070px;
+  max-width: 1280px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  margin: 0 auto;
+  padding: 0 0 0.938rem;
 }
-.section {
-  margin: 2rem;
+.column {
+  margin-left: -0.938em;
+  margin-right: -0.938em;
+}
+.column .row {
+  padding: 0 0.938em;
 }
 
-/* xs  */
-/* @media (min-width: 320px) {} */
-/* sm  */
-/* @media (min-width: 649px) {} */
-/* mediam  */
-/* @media (min-width: 728px) {} */
-/* large  */
-/* @media (min-width: 1020px) {} */
-/* xlg  */
-/* @media (min-width: 1280px) {} */
-/* 2xlg  */
-/* @media (min-width: 1536px) {} */
+.flexwrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexitem {
+  display: flex;
+  align-items: center;
+}
+
+.flexcol {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.main-links a:hover {
+  color: var(--clr-secondray);
+}
+.second-links a:hover {
+  color: var(--clr-text);
+}
+.icon-small,
+.icon-lerge {
+  display: flex;
+  align-items: center;
+  padding: 0 0.25em;
+  font-weight: normal;
+}
+.icon-small {
+  font-size: 1.25em;
+  margin: auto;
+}
+.icon-lerge {
+  font-size: 1.75em;
+  padding: 0 0.75em 0 0;
+}
+
+/* .section {
+  margin: 2rem;
+}  */
+
+/* responsive */
+@media screen and(min-width:992px) {
+  .contaier {
+    padding: 0 2em;
+  }
+}
+
+/*usd-    <i class="fa-solid fa-dollar-sign"></i> */
+/*euro-   <i class="fa-solid fa-euro-sign"></i> */
+/*gpu-    <i class="fa-solid fa-sterling-sign"></i> */
+/*inr-    <i class="fa-solid fa-indian-rupee-sign"></i> */

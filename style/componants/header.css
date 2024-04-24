@@ -1,0 +1,36 @@
+header li > a {
+  display: flex;
+  position: relative;
+  line-height: inherit;
+}
+/* header_top */
+.header-top .wrapper {
+  font-size: var(--font-small);
+  font-weight: var(--fw3);
+  justify-content: space-between;
+  line-height: 42px;
+}
+.header-top .wrapper ul {
+  gap: 2rem;
+}
+.header-top li {
+  position: relative;
+}
+.header-top ul ul {
+  position: absolute;
+  left: -1em;
+  line-height: 2rem;
+  background-color: var(--clr-white);
+  border: 1px solid var(--clr-border);
+  z-index: 1;
+  display: none;
+}
+.header-top .right ul ul li a {
+  padding: 0.5em 1em;
+}
+.header-top .right ul ul li.current a {
+  background-color: var(--clr-border);
+}
+.header-top li:hover ul {
+  display: block;
+}
