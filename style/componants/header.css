@@ -223,6 +223,7 @@ li {
     color: var(--clr-dark2);
   }
   nav .maga .products .text-content {
+    padding: 0;
   }
 }
 /*  */

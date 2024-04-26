@@ -1,4 +1,4 @@
-/* .btn {
+.btn {
   display: inline-block;
   padding: 0.5em 1em;
   color: var(--clr-secondray2);
@@ -19,7 +19,7 @@
 .btn:active {
   transform: scale(0.97);
   box-shadow: 7px 5px 56px -14px, 0 6px 6px, 0 0 100px -10px var(--clr-primari);
-} */
+}
 
 .contaier {
   max-width: 1280px;
