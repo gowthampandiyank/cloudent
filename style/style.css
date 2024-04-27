@@ -62,17 +62,9 @@ ul {
   list-style: none;
 }
 img {
-  max-width: var(--percent100);
+  max-width: 200px;
   vertical-align: middle;
 }
-/* img,
-picture,
-video,
-svg {
-  display: block;
-  max-width: 100%;
-  user-select: none;
-} */
 
 strong {
   font-weight: var(--fw8);

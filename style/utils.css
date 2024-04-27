@@ -1,26 +1,3 @@
-.btn {
-  display: inline-block;
-  padding: 0.5em 1em;
-  color: var(--clr-secondray2);
-  background-color: var(--clr-primari);
-  cursor: pointer;
-  border-radius: 50px;
-  font-weight: 100;
-  text-decoration: none;
-  letter-spacing: 0.1rem;
-  box-shadow: 7px 5px 6px -14px, 0 6px 6px, 0 0 100px -10px var(--clr-primari);
-  transition: 0.2s;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 3px 3px 3.5px -5px, 0 3px 3px, 0 0 100px -10px var(--clr-primar);
-}
-.btn:active {
-  transform: scale(0.97);
-  box-shadow: 7px 5px 56px -14px, 0 6px 6px, 0 0 100px -10px var(--clr-primari);
-}
-
 .contaier {
   max-width: 1280px;
   width: 100%;
@@ -82,19 +59,65 @@
 .object-cover img {
   position: absolute;
   object-fit: cover;
-  width: var(--clr-percent100);
-  height: var(--clr-percent100);
+  width: var(--percent100);
+  height: var(--percent100);
   display: block;
 }
+
 .products .media {
   position: relative;
   flex-shrink: 0;
   overflow: hidden;
 }
-/* .section {
+.section {
   margin: 1rem;
-} */
+}
+/* buttons */
+.primary-button,
+.secondary-button,
+.light-button {
+  font-size: var(--font-small);
+  padding: 0.9em 2em;
+  height: auto;
+  width: fit-content;
+  border-radius: 2em;
+  transform: var(--trans-background-color);
+}
+.primary-button {
+  background-color: var(--clr-primari);
+  color: var(--clr-white);
+}
+.primary-button:hover {
+  background-color: var(--clr-dark2);
+}
+.secondary-button {
+  background-color: var(--clr-dark2);
+  color: var(--clr-white);
+}
+.secondary-button:hover {
+  background-color: var(--clr-bg);
+  color: var(--clr-dark2);
+}
+.light-button {
+  background-color: var(--clr-bg);
+  color: var(--clr-primari);
+}
+.light-button:hover {
+  background-color: var(--clr-dark1);
+  color: var(--clr-white);
+}
 
+/* other */
+.view-all {
+  font-size: var(--font-small);
+  display: flex;
+  gap: 1em;
+  transition: var(--trans-background);
+}
+.mini-text {
+  font-size: var(--font-small);
+  color: var(--clr-text);
+}
 /* responsive */
 @media screen and (min-width: 992px) {
   .contaier {
