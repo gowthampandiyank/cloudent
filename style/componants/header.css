@@ -153,12 +153,12 @@ li {
 }
 .dpt-cat .dpt-head {
   position: relative;
-  width: 300px;
+  width: 250px;
   padding: 0.75em 1.5em;
   background-color: var(--clr-primari);
   border-radius: 7px 7px 0 0;
   color: var(--clr-white);
-  margin-bottom: -2.15em;
+  margin-bottom: -01.6em;
 }
 .dpt-cat .dpt-head .mini-text {
   columns: var(--clr-dark1);
@@ -170,6 +170,18 @@ li {
   padding: 1.3em;
   height: 60px;
   width: 60px;
+}
+.dpt-menu > ul > li > a {
+  font-size: var(--font-small);
+  height: 40px;
+  align-items: center;
+}
+.dpt-menu .has-child:hover ul {
+  display: block;
+}
+.dpt-menu .has-child li a:hover {
+  text-decoration: underline;
+  color: var(--clr-secondray);
 }
 /* search form */
 .header-main .right {
@@ -210,6 +222,52 @@ form.search button:hover {
   background-color: var(--clr-dark2);
   color: var(--clr-primari);
 }
+.site-off {
+  position: fixed;
+  width: 320px;
+  height: var(--percent100);
+  background-color: var(--clr-white);
+  z-index: 1000;
+}
+.off-canvas {
+  width: var(--percent100);
+  height: var(--percent100);
+  touch-action: auto;
+  padding: 1.5em;
+}
+.off-canvas .canvas-head {
+  color: var(--clr-white);
+  justify-content: space-between;
+  padding: 1.5em;
+  margin: -1.5em -1.5em 1.5em;
+  background-color: var(--clr-secondray);
+  border-bottom-right-radius: 25px;
+}
+.off-canvas .canvas-head .logo {
+  z-index: 10;
+  position: relative;
+}
+.off-canvas .canvas-head .logo .cricle {
+  opacity: 0.75;
+}
+.t-close {
+  font-size: 1.25em;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--percent50);
+  background-color: var(--clr-secondray);
+  transition: var(--trans-background-color);
+  color: var(--clr-white);
+}
+.t-close:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-secondray);
+  opacity: 0.75;
+}
+.off-canvas .dpt-head {
+  font-size: var(--font-small);
+  /* padding: ; */
+}
 @media screen and (min-width: 992px) {
   .desktop-hide {
     display: none;
@@ -247,7 +305,7 @@ form.search button:hover {
   nav .mega .wrapper {
     display: flex;
   }
-  nav li.has-child:hover.mega {
+  nav li.has-child:hover .mega {
     display: block;
   }
   nav .mega h4 {
@@ -300,5 +358,80 @@ form.search button:hover {
   .header-main .right {
     max-width: 600px;
     margin-left: auto;
+  }
+  /* departments menu */
+  .dpt-menu {
+    position: absolute;
+    top: var(--percent100);
+    width: 297px;
+    background-color: var(--clr-border);
+    border: 1px solid var(--clr-border);
+    color: var(--clr-primari);
+    border-top: 0;
+    /* padding: 0.75em 1.5em; */
+    border-bottom: 0;
+  }
+  .dpt-menu > ul > li > a {
+    font-weight: var(--fw6);
+    padding: 0 1.5em;
+    border-bottom: 3px solid var(--clr-primari);
+    gap: 1em;
+  }
+  .dpt-menu .has-child > ul,
+  .dpt-menu .mega {
+    position: absolute;
+    top: 0;
+    left: var(--percent100);
+    width: var(--percent100);
+    height: auto;
+    min-height: var(--percent100);
+    padding: 1.5em;
+    font-size: var(--font-small);
+    line-height: 2.5em;
+    /* border: 1px solid var(--clr-border); */
+    border-top: 0;
+    display: none;
+    /* background-position: right bottom; */
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  .dpt-menu .mega {
+    display: none;
+  }
+  .dpt-menu .Beauty ul {
+    background-image: url(public/assets/menu/menu_bg1.jpg);
+  }
+  .dpt-menu .electronincs ul {
+    background-image: url(public/assets/menu/menu_bg2.jpg);
+  }
+  .dpt-menu .fashion ul {
+    background-image: url(public/assets/menu/menu_bg3.jpg);
+  }
+  .dpt-menu .mens ul {
+    background-image: url(public/assets/menu/menu_bg6.jpg);
+  }
+  .dpt-menu .homekits .mega {
+    background-image: url(public/assets/menu/menu_bg4.jpg);
+  }
+  .dpt-menu .has-child > :where(ul, .mega)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      rgpa(225, 225, 255, 1) 0%,
+      rgpa(225, 225, 0, 0)
+    );
+  }
+  .dpt-menu .mega {
+    width: auto;
+    min-width: var(--percent100);
+    /* display: block; */
+  }
+  .dpt-menu .has-child:hover .mega {
+    display: flex;
   }
 }
