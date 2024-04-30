@@ -1,4 +1,4 @@
-header li > a {
+:where(.off-canvas, header) li > a {
   display: flex;
   position: relative;
   line-height: inherit;
@@ -28,10 +28,10 @@ header li > a {
   z-index: 1;
   display: none;
 }
-.header-top .right ul ul li a {
+:where(.header-top, .thetop-nav) .right ul ul li a {
   padding: 0.5em 1em;
 }
-.header-top .right ul ul li.current a {
+:where(.header-top, .thetop-nav) .right ul ul li.current a {
   background-color: var(--clr-border);
 }
 .header-top li:hover ul {
@@ -218,55 +218,10 @@ form.search button {
   border-radius: 0 7px 7px 0;
   transition: var(--trans-backround);
 }
+
 form.search button:hover {
   background-color: var(--clr-dark2);
   color: var(--clr-primari);
-}
-.site-off {
-  position: fixed;
-  width: 320px;
-  height: var(--percent100);
-  background-color: var(--clr-white);
-  z-index: 1000;
-}
-.off-canvas {
-  width: var(--percent100);
-  height: var(--percent100);
-  touch-action: auto;
-  padding: 1.5em;
-}
-.off-canvas .canvas-head {
-  color: var(--clr-white);
-  justify-content: space-between;
-  padding: 1.5em;
-  margin: -1.5em -1.5em 1.5em;
-  background-color: var(--clr-secondray);
-  border-bottom-right-radius: 25px;
-}
-.off-canvas .canvas-head .logo {
-  z-index: 10;
-  position: relative;
-}
-.off-canvas .canvas-head .logo .cricle {
-  opacity: 0.75;
-}
-.t-close {
-  font-size: 1.25em;
-  width: 32px;
-  height: 32px;
-  border-radius: var(--percent50);
-  background-color: var(--clr-secondray);
-  transition: var(--trans-background-color);
-  color: var(--clr-white);
-}
-.t-close:hover {
-  background-color: var(--clr-white);
-  color: var(--clr-secondray);
-  opacity: 0.75;
-}
-.off-canvas .dpt-head {
-  font-size: var(--font-small);
-  /* padding: ; */
 }
 @media screen and (min-width: 992px) {
   .desktop-hide {

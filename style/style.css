@@ -61,10 +61,10 @@ a {
 ul {
   list-style: none;
 }
-img {
+/* img {
   max-width: 200px;
   vertical-align: middle;
-}
+} */
 
 strong {
   font-weight: var(--fw8);
