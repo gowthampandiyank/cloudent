@@ -8,8 +8,7 @@ import '../style/utils.css';
 
 import mobileNav from './utils/mobile_nav';
 mobileNav();
-import slider from './utils/slider.js';
+import slider from './utils/slider';
 slider();
-
 
 
