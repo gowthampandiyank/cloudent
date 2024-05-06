@@ -1,0 +1,63 @@
+.sectop {
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid var(--clr-border);
+}
+.sectop h2 {
+  position: relative;
+  font-size: 1.5em;
+  font-weight: var(--fw8);
+  left: 1em;
+}
+.sectop h2:not(.cricle) {
+  padding: 0 0 0 2em;
+}
+.sectop h2 .cricle {
+  top: -5px;
+}
+/* prodect */
+.products .offer {
+  text-align: center;
+}
+.products .offer p {
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+.products .offer ul {
+  gap: 1em;
+}
+.products .offer ul li {
+  position: relative;
+  font-size: 1.4em;
+  width: 34px;
+  height: 34px;
+  padding: 0.5em;
+  bottom: 10px;
+  color: var(--cark2);
+  background-color: var(--clr-bg);
+  border-radius: 5px;
+}
+.products .offer ul li:not(:last-child)::before {
+  content: ":";
+  position: absolute;
+  right: -0.6em;
+  color: var(--clr-text);
+}
+
+.products.big .item {
+  flex-direction: column;
+  padding: 2.5em;
+  border: 2px solid var(--clr-dark2);
+  border-radius: 7px;
+  max-width: 460px;
+}
+/* responsive */
+@media (min-width: 992px) {
+  .tranding .products {
+    flex: 3;
+  }
+  .products.big .media {
+    max-height: 373px;
+  }
+}

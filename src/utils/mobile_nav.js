@@ -40,7 +40,15 @@ const mobileNav = () => {
         this.closest('.has-child').classList.toggle('expand')
     };
 
+    // slider
 
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
 
 
 

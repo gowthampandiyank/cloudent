@@ -1,11 +1,21 @@
-.slider > div > .wrapper {
-  width: calc(100% - (300px + 2em));
-  margin-left: 22rem;
-}
 .slider .item {
   position: relative;
-  height: 442px;
+  height: 447px;
+  /* font-weight: var(--fw7); */
 }
+.slider .item::before {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 450px;
+  height: 300px;
+  background-color: var(--clr-white);
+  z-index: 1;
+  filter: blur(50px);
+  opacity: 0.8;
+}
+
 .slider .text-content {
   position: absolute;
   height: var(--percent100);
@@ -30,4 +40,10 @@
   color: var(--clr-dark2);
   text-transform: uppercase;
   letter-spacing: -1px;
+}
+@media screen and (min-width: 992px) {
+  .slider > div > .wrapper {
+    width: calc(100% - (300px + 2em));
+    margin-left: 22rem;
+  }
 }
