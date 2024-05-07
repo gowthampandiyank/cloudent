@@ -25,7 +25,7 @@
   margin-bottom: 1em;
 }
 .products .offer ul {
-  gap: 1em;
+  gap: 2em;
 }
 .products .offer ul li {
   position: relative;
@@ -44,13 +44,71 @@
   right: -0.6em;
   color: var(--clr-text);
 }
-
+/* .tranding .products {
+  flex: 3;
+} */
 .products.big .item {
   flex-direction: column;
   padding: 2.5em;
-  border: 2px solid var(--clr-dark2);
+  border: 2px solid var(--clr-dark1);
   border-radius: 7px;
   max-width: 460px;
+  margin: 0 auto;
+}
+
+.products:where(.image, .thumbneil) img {
+  transition: transform 0.3s;
+}
+.products:where(.image, .thumbneil):hover img {
+  transform: scale(1.1);
+}
+.products .hoverble {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.products .hoverble li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0.25em;
+  margin: 0.25em;
+  border-radius: var(--percent50);
+  background-color: var(--clr-white);
+  transition: var(--trans-background-color), opacity 0.3s;
+  color: var(--clr-secondray);
+}
+.products .item:hover .hoverble li a {
+  opacity: 1;
+}
+.products .hoverble li a:hover {
+  color: var(--clr-white);
+  background-color: var(--clr-dark1);
+}
+.products .hoverble li.active a:hover {
+  background-color: var(--clr-primari);
+}
+.products .hoverble li.active:not(.active) {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.2s;
+}
+.products .item:hover .hoverble li {
+  transform: translateX(0);
+  opacity: 1;
+}
+.products .hoverble li:last-child {
+  transition-delay: 0.1s;
+}
+.products .discout {
+  top: 0;
+  right: 0;
+  left: auto;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 1;
 }
 /* responsive */
 @media (min-width: 992px) {
@@ -58,6 +116,6 @@
     flex: 3;
   }
   .products.big .media {
-    max-height: 373px;
+    max-height: 460px;
   }
 }
